@@ -2,6 +2,7 @@
 
 body {
     background-color: #fefae0;
+    /*background-image: linear-gradient(#fee7e7, #feece7, #feede7);*/
     color: rgb(3, 3, 3);
     margin: 0px;
     display: flex;
@@ -28,6 +29,7 @@ section {
     justify-content: center;
     border: 1px solid #f8ad9d;
     align-items: center;
+    padding: 0px;
     }
 
 .navbar a {
@@ -36,11 +38,16 @@ section {
     text-align: left;
     padding: 14px 15px;
     text-decoration: none;
-    font-size: 17px; 
+    font-size: 20px; 
 }
 
 .logo-link {
     width: 100px;
+    margin: 0px;
+}
+
+div {
+    width: 120px;
 }
 
 ul {
@@ -49,7 +56,6 @@ ul {
     padding: 0;
     float: left; 
 }
-
 
 li {
     display: inline-block;
@@ -66,12 +72,11 @@ img {
 }
 
 #start {
-    
+    font-size: 20px;
 }
 
 #nettsider {
-    
-    
+    font-size: 20px;
 }
 #button-nettside {
     color: rgb(23, 19, 209);
@@ -100,10 +105,11 @@ img {
 }
 
 #lagaav {
-/* text-align: center; */
-/* margin-left: 30%; */
+    color: #0f0f0f;
 }
 
 #kontakt {
     text-decoration: none;
+    width: 50px;
+    margin: auto;
 }
