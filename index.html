@@ -1,58 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Heimeside</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" type="module"></script>
+
+    <title>Portofolio</title>
 </head>
 
-<body>
-    <header class="navbar">   
-        <div>
-           <a class="logo-link" href="index.html"> <img src="web-programming.png" alt="logo"> </a> 
+<body class="body light_mode">
+    <header class="header">   
+        <div class="logodiv">
+           <a href="index.html"> <img class="logo" src="/assets/logo.png" alt="logo"> </a> 
+           
         </div>
 
-    <nav>
-       <ul> 
-        <li>
-            <a href="#start">Start</a>
-        </li>
-        <li>
-            <a href="#nettsider">Nettsider</a>
-        </li>
-       </ul> 
-     </nav>
+        <nav class="nav">
+            <ul class="ul"> 
+                <li>
+                    <a href="#home">Hjem</a>
+                </li>
+                <li>
+                    <a href="#about_me">Om meg</a>
+                </li>
+                <li>
+                    <a href="#website">Prosjekter</a>
+                </li>
+            </ul>
+        </nav>
+        <div>
+            <button>Toggle mode</button>
+        </div> 
     </header>
 
-<main>
-   <section id="start">
-        <h1>Velkommen til min heimeside</h1>
-        <h2>Hei, mitt navn er Tiril</h2>
-        <p>
-            Dette er ei nettside der eg legger ut ting eg har laga på gløde programmerings kurs. 
-        </p>
-        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Ein PC">
+    <main>
+    <!--Del ein -->
+        <section id="home">
+        
+            <div class="information"> 
+                <h1 class="h1" id="about_me">Velkommen</h1>
+                <p class="me">
+                    Hei, mitt namn er Tiril, er 24 år og bur ein time utanfor Bergen. Eg er interessert i programmering og tekninske ting.  
+                    </p>
+                    <p class="me">
+                    Dette er ei nettside der eg vil vise fram prosjekt som eg har laga på gløde programmerings kurs.  
+                    Eg har lært HTML, CSS og JS som eg kjem til å vise i desse prosjekta.
+                </p>   
+            </div>
+            <div class="image">
+                <img class="Avatar" src="assets/avatar.png" alt="Ei dame"/>
+            </div>
+        </section>
 
-        <p>
-            Eg er interessert i programmering. 
-        </p>
-   </section>
+        <!--Del to -->
+        <section id="langue">
+            <div class="langue">
+                <h4 class="h4">Språk eg kan</h4>
+                <div class="box">
+                    <p>
+                        HTML 5
+                    </p> 
+                    <P>
+                        CSS
+                    </P>
+                    <P>
+                        JS
+                    </P>
+                </div>
+            </div> 
+        </section>
 
-   <section id="nettsider">
-        <h3>Her er nettsider som eg har laga.</h3>
-        <button id="button1">
-            <a id="button-nettside" target="_blank" href="https://brilliant-longma-8755a3.netlify.app/"> Boks nettside</a>
-        </button>
-   </section>
-</main>
+        <!--Del tre -->
+    
+        <section id="website">
+        
+            <hr class="hr">
+        
+            <h3 class="h3">Mine Prosjekt</h3>
+            <div class="projects">
+                
+                    <div class="responsive">
+                        <div class="gallery">
+                            <h4 class="h4">Ekorn</h4>
+                            <a target="_blank" href="https://amazing-banoffee-397e5d.netlify.app/">
+                            <img class="img" src="/assets/ekorn.jpeg" alt="Nettside om ekorn"></a>
+                            <div class="info">
+                                <a target="_blank" href="https://amazing-banoffee-397e5d.netlify.app/">Parallax og multimedia</a>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="responsive">
+                        <div class="gallery">
+                            <h4 class="h4">Bildegalleri</h4>
+                            <a target="_blank" href="https://cozy-clafoutis-59631b.netlify.app">
+                            <img class="img" src="/assets/bildegalleri.jpeg" alt="Nettside av bildegalleri"></a>
+                            <div class="info">
+                                <a target="_blank" href="https://cozy-clafoutis-59631b.netlify.app/">CSS media-queries</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="responsive">
+                        <div class="gallery">
+                            <h4 class="h4">Counter app</h4>
+                            <a target="_blank" href="https://coruscating-starship-376915.netlify.app/">
+                            <img class="img" src="/assets/Counter_app.jpeg" alt="Nettside av counter app"></a>
+                            <div class="info">
+                                <a target="_blank" href="https://coruscating-starship-376915.netlify.app/">Javascript</a>
+                            </div>
+                        </div>
+                    </div>
+            </div>    
+                <!-- <button class="button_1">
+                <a class="button-nettside" target="_blank" href=""> Parallax og multimedia nettside Ekorn</a>
+                </button> -->
+        </section>
+    </main>
 
 <footer class="footer">
-    <a id="kontakt"
-        target="_blank" href="https://github.com/tirilkoder"> <img src="github.png" alt="Github profil"> 
+    <a
+        target="_blank" href="https://github.com/tirilkoder"> <img class="github" src="/assets/github.png" alt="Github profil"> 
     </a>
-    <p id="lagaav"> 
+    <p class="made_by"> 
         Laga av Tiril
     </p>
     
