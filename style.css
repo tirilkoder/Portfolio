@@ -1,8 +1,10 @@
  @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
- 
  @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
- 
- :root{
+ @import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Raleway&display=swap');
+
+ :root {
+    /* Light mode */
+    --light_mode: #fefae0;
     --top: #fbc4ab;
     --bottom: #f4978e;
     --background: #fefae0;
@@ -10,17 +12,37 @@
     --h1: #ffa34d;
     --li_hover: #f8ad9d;
     --line: #ffceb2;
+    --text_light: #0d0d0d;
+    --headers: #d68c01;
 
+    --button_border: #ffa8a8;
+    --button_background: #fccaca;
+    --circle_color: #f0f0f0;
+    --icon_sun: #fda500;
+    --icon_moon: #0f0f0f;
+    
+    --gallery_back: #fff8c8;
     --border_gallery: #a09b9b;
     --picture_text: #0f0f0f;
     --border: #6e6e6e;
     --shadow_1: #0000003d;
     --shadow_2: #00000030;
-}
+
+    /* Dark mode*/
+    --dark_mode: #272727;
+    --text_dark:#fdfdfd;
+    --icon_sun_dark: #808080;
+    --icon_moon_dark:#808080;
+    --gallery_back_dark: #cecece;
+    --border-gallery_dark: #e9e6e6;
+    --shadow_1_d: #4d4c4c;
+    --shadow_2_d: #4e4e4e;
+
+    --default-transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out, fill .3s ease-in-out, transform .3s ease-in-out;
+}  
 
 body {
     background-color: var(--background);
-    /*background-image: linear-gradient(#fee7e7, #feece7, #feede7);*/
     color: var(--text);
     margin: 0px;
     display: flex;
@@ -30,13 +52,78 @@ body {
 }
 
 .light_mode {
-    background-color: var(--background);
-    color: #0d0d0d;
+    background-color: var(--light_mode);
+    color: var(--text_light);
+    transition: var(--default-transition);
+
+    #icon-moon {
+        fill:var(--icon_moon_dark);
+    }
 }
 
 .dark_mode {
-    background-color: #0d0d0d;
-    color: #fdfdfd;
+    background-color:var(--dark_mode);
+    color: var(--text_dark);
+    transition: var(--default-transition);
+
+    .toggle_button::before {
+        transform: translateX(43px);
+    }
+
+    #icon-sun {
+        fill: var(--icon_sun_dark);
+    }
+
+    #icon-moon {
+        fill: var(--icon_moon);
+    }
+
+    .gallery {
+        border: 1px solid var(--border-gallery_dark);
+        background-color: var(--gallery_back_dark);
+        box-shadow: 0 4px 8px 0 var(--shadow_1_d), 0 6px 20px 0 var(--shadow_2_d);
+    }
+    
+}
+
+.toggle_button {
+    background-color: var(--button_background);
+    border: 1px solid var(--button_border);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 1.33rem;
+    cursor: pointer;
+    padding: 0.66rem;
+    position: relative;
+    transition: var(--default-transition);
+}
+
+.toggle_button:hover {
+    border: 1px solid #f08a8a;
+}
+  .toggle_button::before {
+    content: '';
+    position:absolute;
+    width: 2.22rem;
+    height: 2.22rem;
+    background-color: var(--circle_color);
+    border-radius: 50px;
+    z-index: 0;
+    left:0;
+    transform: translateX(0.22rem);
+    transition: var(--default-transition);
+}
+  
+  .toggle_button svg {
+    z-index: 1;
+    transition: var(--default-transition);
+}
+  #icon-sun {
+    fill: var(--icon_sun);
+}
+  #icon-moon {
+    fill: var(--icon_moon);
 }
 
 main {
@@ -49,19 +136,11 @@ main {
 .header {
     background-color: var(--top);
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     min-width: 20em;
     font-size: 1.25em; 
-    /*border: 1px solid #f8ad9d;*/
-}
-
-.header a {
-    float: left;
-    color: var(--text);
-    align-items: left;
-    padding: 14px 15px;
-    text-decoration: none;
+    padding: 10px;
 }
 
 .logo {
@@ -91,8 +170,7 @@ li {
 }
 
 li a:hover {
-    background-color: var(--li_hover);
-    
+    background-color: var(--li_hover); 
 }
 
 .h1 {
@@ -102,22 +180,20 @@ li a:hover {
     color: var(--h1);
 }
 
-.h2 {
-    font-size: 1.5625em;
-    color: orange;
-    
-}
-
 .h3 {
     font-size: 1.25em;
-    color: orange;
+    color: var(--h1);
 }
 .h4 {
     font-size: 1.25em;
-    color: orange;
+    color: var(--h1);
 }
 .me {
     width: 60%; 
+}
+
+.he {
+    color: var(--text);
 }
 
 #home {
@@ -125,13 +201,13 @@ li a:hover {
     display: flex;
     padding-top: 1em;
     width: 100%;
-    /*background-color:#fcf1ac;*/
 }
 
-.computer {
+.avatar {
     width: 50%;    
     padding-top: 1%;
     height: 10%;
+    border-radius: 50px;
 }
 .image {
     height: 10%;
@@ -154,11 +230,6 @@ li a:hover {
     width: 100%;
     padding-top: 2em;
 }
-/*
-.box {
-    display: flex;
-    gap: 2em;
-}*/
 
 .hr{
     width: 50%;
@@ -173,8 +244,6 @@ li a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /*padding-top: 5%;*/
-    /*background-color:#fcf1ac;*/
 }
 
 .projects {
@@ -188,22 +257,23 @@ a {
     text-decoration: none;
     color: var(--text);
 }
+
 .responsive {
     float: left;
     width: 300px;
     margin: 50px;
-
 }
 
 .gallery {
     border: 1px solid var(--border_gallery);
-    background-color: var(--background);
+    background-color: var(--gallery_back);
     display: flex;
     justify-content: center;
     flex-direction: column;
     border-radius: 8px;
     box-shadow: 0 4px 8px 0 var(--shadow_1), 0 6px 20px 0 var(--shadow_2);
 }
+
 .gallery img {
     width: 100%;
     height: 150px;
@@ -220,22 +290,6 @@ a {
     font-family: 'Nunito',sans-serif;
     width: 300px;
   }
-
-/*.button-nettside {
-    color: rgb(23, 19, 209);
-    text-decoration: none;
-    font-family: 'Nunito';
-}
-
-.button_1 {
-    background-color: rgb(252, 202, 202);
-    font-size: 1.125em;
-    font-weight: bold;
-    padding: 10px 28px;
-    border-radius: 8px;
-    border: 2px solid #ffa8a8;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}*/
 
 .footer {
     display: flex;
@@ -284,23 +338,22 @@ a {
     }
 
     .information {   
-        width: 50%; 
+        width: 80%; 
         height: 30%;
     }
    
-    .computer {
-        width: 50%; 
+    .avatar {
+        width: 70%; 
         height: 60%;
         
     }
+
     .image {
         height: 50%;
-        width: 50%;    
+        width: 80%;    
         display: flex;
         justify-content: center;
-        padding-top: 10%;
-    }
-    
+    } 
 }
 /* Responsive opp til mobil */
 @media (max-width: 426px) {
@@ -324,7 +377,7 @@ a {
         width: 100%;
     }
 
-    .computer {
+    .avatar {
         width: 50%;
         padding: 0;
     }
