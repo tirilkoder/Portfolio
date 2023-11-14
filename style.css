@@ -107,8 +107,9 @@ main {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    min-width: 19.925282510272rem;
+    min-width: 100%;
     font-size: 1.245330156892rem; 
+    position: fixed;
 }
 /* bruke px kun på border og rem på resten og % på bilder */
 
@@ -224,9 +225,29 @@ li a:hover {
 
 .h1 {
     font-size: 1.9925282510272rem;
-    font-family: 'Fredericka the Great';
-    font-weight: lighter;
-    color: var(--h1);
+    font-family: 'Nunito',sans-serif;
+    font-weight: bold;
+    
+}
+
+@keyframes color-animation {
+    0%    {color: var(--color-1)}
+    32%   {color: var(--color-1)}
+    33%   {color: var(--color-2)}
+    65%   {color: var(--color-2)}
+    66%   {color: var(--color-3)}
+    99%   {color: var(--color-3)}
+    100%  {color: var(--color-1)}
+}
+
+.title-word {
+    animation: color-animation 4s linear infinite;
+}
+  
+  .title-word-1 {
+    --color-1: #DF8453;
+    --color-2: #DBAD4A;
+    --color-3: var(--h1);
 }
 
 .h3 {
@@ -244,12 +265,14 @@ li a:hover {
 
 .he {
     color: var(--text);
+    margin-top: 0.9375rem;
+    margin-bottom: 0.9375rem;
 }
 
 #home {
     font-size: 1.25em;
     display: flex;
-    padding-top: 1em;
+    padding-top: 6.25rem;
     width: 100%;
     align-items: center;
 }
@@ -258,7 +281,7 @@ li a:hover {
     width: 40%;    
     padding-top: 1%;
     height: 10%;
-    border-radius: 50px;
+    border-radius: 3.125rem;
 }
 .image {
     height: 10%;
@@ -276,12 +299,23 @@ li a:hover {
 
 }
 
-#langue {
+.box {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    padding-top: 1.9925282510272rem;
+    width: 50%;
+    font-family: 'Nunito',sans-serif;
+    font-size: 1.25rem;
+}
+
+#about_me {
+    padding: 6.25rem 6.25rem 0 6.25rem;
+}
+
+.langue {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
 }
 
 .hr{
@@ -297,6 +331,7 @@ li a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 6.25rem;
 }
 
 .projects {
@@ -341,11 +376,14 @@ a {
 }
 
 .info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 0.9375rem;
-    text-align: center;
     text-decoration: none;
     font-family: 'Nunito',sans-serif;
     width: 18.75rem;
+    height: 4.375rem;
   }
 
 .footer {
@@ -423,6 +461,11 @@ a {
     #website {   
         flex-direction: column;
         align-items: center;
+    }
+
+    .responsive {
+        margin-top: 0;
+        margin-right: 0;
     }
 
     .information{
