@@ -4,10 +4,10 @@
 
  :root {
     /* Light mode */
-    --light_mode: #fefae0;
+    --light_mode: #fffceb;
     --top: #ffceb2;
     --bottom: #f4978e;
-    --background: #fffceb; /*#fefae0*/
+   /* --background: ; #fefae0*/
     --text: #0f0f0f;
     --h1: #ffa34d;
     --nav_text: #282828;
