@@ -7,7 +7,6 @@
     --light_mode: #fffceb;
     --top: #ffceb2;
     --bottom: #f4978e;
-   /* --background: ; #fefae0*/
     --text: #0f0f0f;
     --h1: #ffa34d;
     --nav_text: #282828;
@@ -19,7 +18,7 @@
     --nav_pop_background: #ffd7ce;
     --hamburger: #0f0f0f;
     --text_1: #DF8453;
-    --text_2: #DBAD4A;
+    --text_2: #f0c464;
     --text_3: #ffa34d;
    /* --logo_border:#ffa2a2; */
 
@@ -55,7 +54,6 @@
 }  
 
 body {
-    background-color: var(--background);
     color: var(--text);
     margin: 0;
     display: flex;
