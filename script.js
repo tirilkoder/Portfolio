@@ -28,3 +28,16 @@ function toggleNav() {
 }
 
 hamburger.addEventListener("click", toggleNav);
+
+// When the scroll button is clicked, scroll down smoothly to the next section.
+const scrollBtn = document.getElementById("scroll-down-btn");
+if (scrollBtn) {
+  scrollBtn.addEventListener("click", function () {
+    const targetSection = document.getElementById("about_me");
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    } else {
+      console.error('Element with id "about_me" not found.');
+    }
+  });
+}
