@@ -7,8 +7,6 @@ const button = document.querySelector(".toggle_button");
 // Add an event listener to the div class, listening for a "click" event, and preforming the function when activated
 button.addEventListener("click", themeToggle);
 
-
-
 // html elements we need to use javascript on from the "index.html" file
 const navBar = document.querySelector(".ul");
 const hamburger = document.querySelector(".hamburger");
@@ -18,16 +16,15 @@ let navOpen = false;
 
 // toggles navbar and changes the styling
 function toggleNav() {
-    if(navOpen === false) {
-        navBar.classList = "show_nav";
-        hamburger.classList = "fixed_burger"
-        navOpen = true;
-    } 
-    else {
-        navBar.classList = "ul";
-        hamburger.classList = "hamburger"
-        navOpen = false;
-    }
+  if (navOpen === false) {
+    navBar.classList = "show_nav";
+    hamburger.classList = "fixed_burger";
+    navOpen = true;
+  } else {
+    navBar.classList = "ul";
+    hamburger.classList = "hamburger";
+    navOpen = false;
+  }
 }
 
 hamburger.addEventListener("click", toggleNav);
