@@ -55,6 +55,10 @@
     fill 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--text);
   margin: 0;
