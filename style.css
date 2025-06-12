@@ -6,7 +6,7 @@
   /* Light mode */
   --light_mode: #fffceb;
   --top: #ffceb2;
-  --bottom: #f4978e;
+  --bottom: #ffbe98;
   --text: #0f0f0f;
   --h1: #ffa34d;
   --nav_text: #282828;
@@ -119,6 +119,7 @@ main {
   min-width: 100%;
   font-size: 1.245330156892rem;
   position: fixed;
+  z-index: 100;
 }
 /* bruke px kun på border og rem på resten og % på bilder */
 
@@ -226,6 +227,7 @@ li a:hover {
   align-items: center;
   justify-content: center;
   position: absolute;
+  z-index: 101;
   background-color: var(--nav_pop_background);
   margin-left: 5.4375rem;
   margin-top: 1.875rem;
@@ -329,7 +331,6 @@ li a:hover {
   border: none;
   cursor: pointer;
   outline: none;
-  /* Optional: add a hover transform for extra feedback */
   transition: transform 0.3s ease;
 }
 
@@ -347,6 +348,7 @@ li a:hover {
   color: var(--h1);
   padding-bottom: 40px;
 }
+
 .h4,
 .h4_contact {
   font-size: 2.245330156892rem;
@@ -362,6 +364,10 @@ li a:hover {
   color: var(--text);
   margin-top: 0.9375rem;
   margin-bottom: 0.9375rem;
+}
+
+.color {
+  color: orange;
 }
 
 #home {
@@ -596,6 +602,7 @@ a {
     display: flex;
     justify-content: center;
   }
+
   .me {
     flex-direction: column;
     align-items: center;
@@ -608,10 +615,12 @@ a {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: auto;
   }
+
   .h1 {
     display: flex;
     flex-direction: column;
   }
+
   #home,
   #website,
   .about_me,
@@ -634,6 +643,7 @@ a {
     padding: 0;
     width: 100%;
   }
+
   .image {
     height: 50%;
     width: 100%;
@@ -644,6 +654,7 @@ a {
   .box {
     width: 100%;
   }
+
   .box_langue {
     display: flex;
     flex-direction: column;
